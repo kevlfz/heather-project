@@ -1,5 +1,33 @@
-<img src="monke.gif" alt = "swinging mokey">
+<!-- <style>
+  .monkey{
+    position: relative;
+  	top: 200px;
+  	left: 300px;
+  }
+	
+</style>
+ -->
+<!-- <img src="monke.gif" alt = "swinging mokey" style="position: absolute; left: 300px; top:200px"> -->
+<body>
+  
+</body>
 
 <script>
+  
+  function createGif (x, y){
+    const gif = document.createElement('img')
+    gif.src = 'monke.gif'
+    gif.style.position = 'absolute'
+    gif.style.top = y + 'px'
+    gif.style.left = x + 'px'
+    document.body.appendChild(gif)
+  }
+	
+  for (let i = 0; i < 100; i++){
+    const x = i * 50
+    createGif(x, 0)
+  }
 
+  document.body.style.backgroundColor = 'hsl(202, 84%, 61%)'
+  
 </script>
